@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HockeyCalendar.SchedulePage"
+              BackgroundColor="Black">
+    <ContentPage.Content>
+        <ListView x:Name="ScheduleView" HasUnevenRows="True" SeparatorColor="LightGray">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+                            <Label Text="{Binding DisplayedDateTime}" VerticalTextAlignment="Start" TextColor="White"/>
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label Text="Home" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="DeepSkyBlue"/>
+                                <Label Text="{Binding HomeTeam}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                                                                 FontSize="Large" FontAttributes="Bold" TextColor="White"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label Text="Away" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="DeepSkyBlue"/>
+                                <Label Text="{Binding AwayTeam}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
+                                                                 FontSize="Large" FontAttributes="Bold" TextColor="White"/>
+                            </StackLayout>
+
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

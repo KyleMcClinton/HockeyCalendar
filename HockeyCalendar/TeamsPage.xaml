@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HockeyCalendar.TeamsPage"
+              BackgroundColor="Black">
+    <ContentPage.Content>
+        <ListView x:Name="TeamsView" ItemTapped="OnTeamTapped" ItemSelected="OnTeamSelected">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                            <CheckBox Margin="0,10,0,10" Color="DeepSkyBlue" IsEnabled="False" IsChecked="{Binding Selected}"/>
+                            <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                                   FontSize="Large" TextColor="White"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
