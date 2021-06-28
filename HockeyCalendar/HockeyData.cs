@@ -176,7 +176,7 @@ namespace HockeyCalendar
 
             DateTime todayDate = DateTime.Today;
             string todayDateStr = todayDate.ToString("yyyy-MM-dd");
-            DateTime toEndWeek = todayDate.AddDays(6);
+            DateTime toEndWeek = todayDate.AddDays(13);
             string toEndWeekStr = toEndWeek.ToString("yyyy-MM-dd");
 
             string requestUriStr = NhlApi + "schedule?" + "teamId=" + teamId + "&startDate=" + todayDateStr + "&endDate=" + toEndWeekStr;
