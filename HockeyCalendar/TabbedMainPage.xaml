@@ -4,5 +4,6 @@
              x:Class="HockeyCalendar.TabbedMainPage"
             SelectedTabColor="White"
             UnselectedTabColor="LightGray"
-            BarBackgroundColor ="Black">
+            BarBackgroundColor ="Black"
+            BackgroundColor="Black">
 </TabbedPage>
